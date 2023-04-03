@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopingmall</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        referrerpolicy="no-referrer"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d10994c855.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <script src="script/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <progress max="100" value="0"></progress>
+    <div id="user-menu">
+        <h2>메뉴</h2>
+        <ul id="user-gnb">
+            <li><a href="#">마이페이지</a></li>
+            <li><a href="#">위시리스트</a></li>
+            <li><a href="#">고객지원</a></li>
+        </ul>
+        <a href="signin.html" id="login">로그인</a>
+        <a href="signup.html">회원가입</a>
+        <i class="fa fa-close"></i>
+    </div>
+    <header>
+        <div class="header-wrap">
+            <div id="logo">
+                <a href="index.html">SHOPINGMALL</a>
+            </div>
+            <div id="nav">
+                <ul id="gnb">
+                    <li>
+                        <a href="#">BRAND</a>
+                    </li>
+                    <li>
+                        <a href="#">NEW</a>
+                    </li>
+                    <li>
+                        <a href="#">BEST</a>
+                    </li>
+                    <li>
+                        <a href="#">SALE</a>
+                    </li>
+                    <li>
+                        <a href="#">EVENT</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="right-menu">
+                <i class="fa fa-search"></i>
+                <i class="fa fa-heart"></i>
+                <i class="fa fa-user"></i>
+            </div>
+        </div>
+        <div class="mback">
+            <div class="submenu-wrap">
+                <ul class="submenu">
+                    <li><a href="#"><img src="images/NK_MAIN_LOGO.jpg" alt="NIKE"></a></li>
+                    <li><a href="#"><img src="images/AD_MAIN_LOGO.jpg" alt="ADIDAS"></a></li>
+                    <li><a href="#"><img src="images/PU_MAIN_LOGO.jpg" alt="PUMA"></a></li>
+                    <li><a href="#"><img src="images/DFNS_MAIN_LOGO.png" alt="DFNS"></a></li>
+                    <li><a href="#"><img src="images/SHR_MAIN_LOGO.jpg" alt="SHR"></a></li>
+                </ul>
+                <ul class="alphabat">
+                    <li><a href="#" class="all">ALL</a></li>
+                    <li><a href="#" class="selected">A</a></li>
+                    <li><a href="#" class="selected">B</a></li>
+                    <li><a href="#" class="selected">C</a></li>
+                    <li><a href="#" class="selected">D</a></li>
+                    <li><a href="#" class="selected">E</a></li>
+                    <li><a href="#" class="selected">F</a></li>
+                    <li><a href="#" class="selected">G</a></li>
+                    <li><a href="#" class="selected">H</a></li>
+                    <li><a href="#" class="selected">I</a></li>
+                    <li><a href="#" class="selected">J</a></li>
+                    <li><a href="#" class="selected">K</a></li>
+                    <li><a href="#" class="selected">L</a></li>
+                    <li><a href="#" class="selected">M</a></li>
+                    <li><a href="#" class="selected">N</a></li>
+                    <li><a href="#" class="selected">O</a></li>
+                    <li><a href="#" class="selected">P</a></li>
+                    <li><a href="#" class="selected">Q</a></li>
+                    <li><a href="#" class="selected">R</a></li>
+                    <li><a href="#" class="selected">S</a></li>
+                    <li><a href="#" class="selected">T</a></li>
+                    <li><a href="#" class="selected">U</a></li>
+                    <li><a href="#" class="selected">V</a></li>
+                    <li><a href="#" class="selected">W</a></li>
+                    <li><a href="#" class="selected">X</a></li>
+                    <li><a href="#" class="selected">Y</a></li>
+                    <li><a href="#" class="selected">Z</a></li>
+                    <li><a href="#" class="selected">123</a></li>
+                </ul>
+                <div class="brand-list">
+                    <ul class="brand-menu">
+                        <li data-group="N"><a href="#"><img src="images/NK_LOGO.jpg" alt=""><span>NIKE</span></a></li>
+                        <li data-group="A"><a href="#"><img src="images/AD_LOGO.jpg" alt=""><span>ADIDAS</span></a></li>
+                        <li data-group="F"><a href="#"><img src="images/FILA_LOGO.png" alt=""><span>FILA</span></a></li>
+                        <li data-group="P"><a href="#"><img src="images/PU_LOGO.jpg" alt=""><span>PUMA</span></a></li>
+                        <li data-group="C"><a href="#"><img src="images/CV_LOGO.jpg" alt=""><span>CONVERSE</span></a>
+                        </li>
+                        <li data-group="D"><a href="#"><img src="images/DISCOVERY_LOGO.jpg"
+                                    alt=""><span>DISCOVERY</span></a></li>
+                        <li data-group="R"><a href="#"><img src="images/RB_LOGO.jpg" alt=""><span>REEBOK</span></a></li>
+                        <li data-group="W"><a href="#"><img src="images/WV_LOGO.jpg" alt=""><span>WHEVER</span></a></li>
+                        <li data-group="N"><a href="#"><img src="images/NB_LOGO.jpg" alt=""><span>NEW BALANCE</span></a>
+                        </li>
+                        <li data-group="L"><a href="#"><img src="images/LA_LOGO.png" alt=""><span>LACOSTE</span></a>
+                        </li>
+                        <li data-group="G"><a href="#"><img src="images/GA_LOGO.png" alt=""><span>SUPERGA</span></a>
+                        </li>
+                        <li data-group="F"><a href="#"><img src="images/FP_LOGO.jpg" alt=""><span>FRED PERRY</span></a>
+                        </li>
+                        <li data-group="M"><a href="#"><img src="images/MR_LOGO.jpg" alt=""><span>MARKERS</span></a>
+                        </li>
+                        <li data-group="S"><a href="#"><img src="images/SK_LOGO.jpg" alt=""><span>SKECHERS</span></a>
+                        </li>
+                        <li data-group="H"><a href="#"><img src="images/HP_LOGO.jpg" alt=""><span>HONEY APRIL</span></a>
+                        </li>
+                        <li data-group="T"><a href="#"><img src="images/TE_LOGO.jpg" alt=""><span>TEVA</span></a></li>
+                        <li data-group="S"><a href="#"><img src="images/SHR_LOGO.jpg" alt=""><span>SHOELAMODE</span></a>
+                        </li>
+                        <li data-group="C"><a href="#"><img src="images/CHT_LOGO.jpg" alt=""><span>CARHARTT</span></a>
+                        </li>
+                        <li data-group="123"><a href="#"><img src="images/47B_LOGO.jpg" alt=""><span>47BRAND</span></a>
+                        </li>
+                        <li data-group="C"><a href="#"><img src="images/CP_LOGO.jpg" alt=""><span>CHAMPION</span></a>
+                        </li>
+                        <li data-group="A"><a href="#"><img src="images/AKC_LOGO.jpg" alt=""><span>AKIII
+                                    CLASSIC</span></a></li>
+                        <li data-group="B"><a href="#"><img src="images/BI_LOGO.jpg" alt=""><span>BOOGIE BEAR</span></a>
+                        </li>
+                        <li data-group="B"><a href="#"><img src="images/BS_LOGO.jpg" alt=""><span>BIRKENSTOCK</span></a>
+                        </li>
+                        <li data-group="B"><a href="#"><img src="images/BM_LOGO.jpg" alt=""><span>BLUE
+                                    MOUNTAIN</span></a></li>
+                        <li data-group="C"><a href="#"><img src="images/CC_LOGO.jpg" alt=""><span>CROCS</span></a></li>
+                        <li data-group="J"><a href="#"><img src="images/JA_LOGO.jpg" alt=""><span>JDAUL</span></a></li>
+                        <li data-group="L"><a href="#"><img src="images/LK_LOGO.jpg" alt=""><span>LAKAI</span></a></li>
+                        <li data-group="B"><a href="#"><img src="images/BQ_LOGO.jpg" alt=""><span>BSQT</span></a></li>
+                        <li data-group="M"><a href="#"><img src="images/MN_LOGO.jpg" alt=""><span>MONGTANA</span></a>
+                        </li>
+                        <li data-group="E"><a href="#"><img src="images/EX_LOGO.jpg" alt=""><span>EXCELSIOR</span></a>
+                        </li>
+                        <li data-group="E"><a href="#"><img src="images/EN_LOGO.jpg" alt=""><span>ENCOREE</span></a>
+                        </li>
+                        <li data-group="T"><a href="#"><img src="images/TH_LOGO.jpg" alt=""><span>THUD</span></a></li>
+                        <li data-group="K"><a href="#"><img src="images/KC_LOGO.jpg" alt=""><span>KOLCA</span></a></li>
+                        <li data-group="A"><a href="#"><img src="images/AE_LOGO.jpg" alt=""><span>AGEDGRAY</span></a>
+                        </li>
+                        <li data-group="L"><a href="#"><img src="images/LM_LOGO.jpg" alt=""><span>LEMINE</span></a></li>
+                        <li data-group="S"><a href="#"><img src="images/STA_LOGO.jpg" alt=""><span>STARB</span></a></li>
+                        <li data-group="B"><a href="#"><img src="images/BT8_LOGO.jpg" alt=""><span>BETTER
+                                    THAN88</span></a></li>
+                        <li data-group="W"><a href="#"><img src="images/WVA_LOGO.jpg" alt=""><span>WHEVER ACC</span></a>
+                        </li>
+                        <li data-group="M"><a href="#"><img src="images/MJ_LOGO.jpg"
+                                    alt=""><span>MIAMIPROJECT</span></a></li>
+                        <li data-group="F"><a href="#"><img src="images/FLM_LOGO.jpg"
+                                    alt=""><span>FLEECEMELBOURNE</span></a></li>
+                        <li data-group="B"><a href="#"><img src="images/BD_LOGO.jpg" alt=""><span>BUTDEEP</span></a>
+                        </li>
+                        <li data-group="123"><a href="#"><img src="images/2AT_LOGO.jpg"
+                                    alt=""><span>2NDATERLIER</span></a></li>
+                        <li data-group="S"><a href="#"><img src="images/STAR_LOGO.jpg" alt=""><span>STARTER</span></a>
+                        </li>
+                        <li data-group="E"><a href="#"><img src="images/EXR_LOGO.jpg" alt=""><span>EXR</span></a></li>
+                        <li data-group="C"><a href="#"><img src="images/CLY_LOGO.jpg" alt=""><span>CLAYONG</span></a>
+                        </li>
+                        <li data-group="123"><a href="#"><img src="images/6FT_LOGO.jpg" alt=""><span>6FT</span></a></li>
+                        <li data-group="C"><a href="#"><img src="images/CTA_LOGO.jpg" alt=""><span>CUSTOM ADE</span></a>
+                        </li>
+                        <li data-group="M"><a href="#"><img src="images/MC_LOGO.png" alt=""><span>MACMOC</span></a></li>
+                        <li data-group="R"><a href="#"><img src="images/RM_LOGO.jpg" alt=""><span>ROMANTIC
+                                    MOVE</span></a></li>
+                        <li data-group="A"><a href="#"><img src="images/ALL_LOGO.jpg" alt=""><span>ALLCLASSIC</span></a>
+                        </li>
+                        <li data-group="D"><a href="#"><img src="images/DL_LOGO.jpg" alt=""><span>DAYLIFE</span></a>
+                        </li>
+                        <li data-group="P"><a href="#"><img src="images/PS_LOGO.jpg" alt=""><span>PROSPECS</span></a>
+                        </li>
+                        <li data-group="Z"><a href="#"><img src="images/ZY_LOGO.jpg" alt=""><span>ZAXY</span></a></li>
+                        <li data-group="S"><a href="#"><img src="images/SKN_LOGO.jpg" alt=""><span>SKONO</span></a></li>
+                        <li data-group="P"><a href="#"><img src="images/PW_LOGO.jpg" alt=""><span>PROWORLDCUP</span></a>
+                        </li>
+                        <li data-group="R"><a href="#"><img src="images/RO_LOGO.jpg"
+                                    alt=""><span>ROCKFISHWEATHERWEATHERWEAR</span></a></li>
+                        <li data-group="H"><a href="#"><img src="images/HT_LOGO.jpg" alt=""><span>HUNTER</span></a></li>
+                        <li data-group="G"><a href="#"><img src="images/GIL_LOGO.jpg" alt=""><span>GILDAN</span></a>
+                        </li>
+                        <li data-group="A"><a href="#"><img src="images/AMAP_LOGO.jpg" alt=""><span>AMERICAN
+                                    APPAREL</span></a></li>
+                        <li data-group="A"><a href="#"><img src="images/AAAA_LOGO.jpg" alt=""><span>AAA</span></a></li>
+                        <li data-group="A"><a href="#"><img src="images/ANV_LOGO.jpg" alt=""><span>ANVIL</span></a></li>
+                        <li data-group="C"><a href="#"><img src="images/CCS_LOGO.jpg" alt=""><span>COMFORT
+                                    COLORS</span></a></li>
+                        <li data-group="P"><a href="#"><img src="images/PRIN_LOGO.jpg" alt=""><span>PRINTSTAR</span></a>
+                        </li>
+                        <li data-group="G"><a href="#"><img src="images/GLIM_LOGO.jpg" alt=""><span>GLIMMER</span></a>
+                        </li>
+                        <li data-group="H"><a href="#"><img src="images/HNM_LOGO.jpg" alt=""><span>HENLYMAIN</span></a>
+                        </li>
+                        <li data-group="S"><a href="#"><img src="images/SZ_LOGO.jpg" alt=""><span>SHUBLIZ</span></a>
+                        </li>
+                        <li data-group="B"><a href="#"><img src="images/BZ_LOGO.jpg" alt=""><span>BABYZZAM</span></a>
+                        </li>
+                        <li data-group="H"><a href="#"><img src="images/HNS_LOGO.jpg" alt=""><span>HANES</span></a></li>
+                        <li data-group="F"><a href="#"><img src="images/FALR_LOGO.jpg"
+                                    alt=""><span>FIRENZEATHELIER</span></a></li>
+                        <li data-group="P"><a href="#"><img src="images/PAS_LOGO.jpg" alt=""><span>PASCOROZEN</span></a>
+                        </li>
+                        <li data-group="W"><a href="#"><img src="images/WETHE_LOGO.jpg"
+                                    alt=""><span>WETHEROAD</span></a></li>
+                        <li data-group="H"><a href="#"><img src="images/HEE_LOGO.jpg" alt=""><span>HEELTOP</span></a>
+                        </li>
+                        <li data-group="S"><a href="#"><img src="images/SHO_LOGO.jpg" alt=""><span>SHOECUS</span></a>
+                        </li>
+                        <li data-group="M"><a href="#"><img src="images/MPY_LOGO.jpg" alt=""><span>MALPYO</span></a>
+                        </li>
+                        <li data-group="D"><a href="#"><img src="images/DFNS_LOGO.jpg" alt=""><span>DFNS</span></a></li>
+                        <li data-group="A"><a href="#"><img src="images/ASI_LOGO.jpg" alt=""><span>ASICS</span></a></li>
+                        <li data-group="V"><a href="#"><img src="images/VA_LOGO.jpg" alt=""><span>VANS</span></a></li>
+                        <li data-group="L"><a href="#"><img src="images/LOMC_LOGO.jpg" alt=""><span>LOMC</span></a></li>
+                        <li data-group="C"><a href="#"><img src="images/CLA_LOGO.jpg" alt=""><span>CLARKS</span></a>
+                        </li>
+                        <li data-group="G"><a href="#"><img src="images/GG_LOGO.jpg" alt=""><span>GOLDEN
+                                    GOOSE</span></a></li>
+                        <li data-group="F"><a href="#"><img src="images/FLS_LOGO.jpg" alt=""><span>FLORIDA
+                                    STUDIO</span></a></li>
+                        <li data-group="M"><a href="#"><img src="images/MTS_LOGO.jpg" alt=""><span>MEETS</span></a></li>
+                        <li data-group="G"><a href="#"><img src="images/GAP_LOGO.jpg" alt=""><span>GAP</span></a></li>
+                        <li data-group="N"><a href="#"><img src="images/NATIVE_LOGO.jpg" alt=""><span>NATIVE</span></a>
+                        </li>
+                        <li data-group="B"><a href="#"><img src="images/BL2_LOGO.jpg" alt=""><span>BALLOP</span></a>
+                        </li>
+                        <li data-group="V"><a href="#"><img src="images/VE_LOGO.jpg" alt=""><span>VEJA</span></a></li>
+                        <li data-group="A"><a href="#"><img src="images/AGTHA_LOGO.jpg" alt=""><span>AGATHA</span></a>
+                        </li>
+                        <li data-group="E"><a href="#"><img src="images/ELLE_LOGO.jpg" alt=""><span>ELLE</span></a></li>
+                        <li data-group="S"><a href="#"><img src="images/SPRIS_LOGO.jpg" alt=""><span>SPRIS</span></a>
+                        </li>
+                        <li data-group="E"><a href="#"><img src="images/EGY_LOGO.jpg" alt=""><span>EMERGENCY</span></a>
+                        </li>
+                        <li data-group="A"><a href="#"><img src="images/ANP_LOGO.jpg" alt=""><span>ARNOLD
+                                    PALMER</span></a></li>
+                        <li data-group="N"><a href="#"><img src="images/NUS_LOGO.jpg" alt=""><span>NUUS</span></a></li>
+                        <li data-group="S"><a href="#"><img src="images/SKW_LOGO.jpg" alt=""><span>SHAKA WEAR</span></a>
+                        </li>
+                        <li data-group="B"><a href="#"><img src="images/BLW_LOGO.jpg" alt=""><span>BLOW</span></a></li>
+                        <li data-group="Z"><a href="#"><img src="images/ZVN_LOGO.jpg" alt=""><span>ZAVANAS</span></a>
+                        </li>
+                        <li data-group="R"><a href="#"><img src="images/RT_LOGO.jpg" alt=""><span>ROOT8</span></a></li>
+                        <li data-group="P"><a href="#"><img src="images/PKM_LOGO.jpg" alt=""><span>POKEMON</span></a>
+                        </li>
+                        <li data-group="T"><a href="#"><img src="images/TNP_LOGO.jpg" alt=""><span>THE NOPI</span></a>
+                        </li>
+                        <li data-group="K"><a href="#"><img src="images/KHT_LOGO.jpg" alt=""><span>KIPHANT</span></a>
+                        </li>
+                        <li data-group="M"><a href="#"><img src="images/MNX_LOGO.jpg" alt=""><span>MNX15</span></a></li>
+                        <li data-group="M"><a href="#"><img src="images/MBY_LOGO.jpg" alt=""><span>MULEBOY</span></a>
+                        </li>
+                        <li data-group="F"><a href="#"><img src="images/FCL_LOGO.jpg" alt=""><span>FIND
+                                    CHILLIN</span></a></li>
+                        <li data-group="K"><a href="#"><img src="images/KMS_LOGO.jpg" alt=""><span>KKOMOMSHOE</span></a>
+                        </li>
+                        <li data-group="M"><a href="#"><img src="images/MD_LOGO.jpg" alt=""><span>MEDUSE</span></a></li>
+                        <li data-group="M"><a href="#"><img src="images/MER_LOGO.jpg" alt=""><span>MERRELL</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="blank"></div>
+    <section id="my-page">
+        <div class="article-wrap">
+            <form method="post" name="jinForm" action="joinCheck.php" autocomplete="off">
+                <fieldset>
+                    <!-- <legend>개인정보</legend> -->
+                    <ul>
+                        <li>
+                            <label for="userId">
+                                <p>아이디</p>
+                                <input type="text" id="userId" name="userId" maxlength="12" placeholder="대문자, 영어, 숫자 조합 6~12자" required>
+                                <div id="checkId">사용가능합니다.</div>
+                            </label>
+                        </li>
+                        <li>
+                            <label for="userPw">
+                                <p>비밀번호</p>
+                                <input type="password" id="userPw" name="userPw" required>
+                                <div id="checkId">사용가능합니다.</div>
+                            </label>
+                        </li>
+                        <li>
+                            <label for="userPw2">
+                                <p>비밀번호 재확인</p>
+                                <input type="password" id="userPw2" name="userPw2" required>
+                                <div id="checkId">일치합니다.</div>
+                            </label>
+                        </li>
+                        <li>
+                            <label for="userName">
+                                <p>이름</p>
+                                <input type="text" id="userName" name="userName" required>
+                            </label>
+                        </li>
+                        <li>
+                            <label for="userBirth">
+                                <p>생년월일</p>
+                                <input type="text" id="userBirth" name="userBirth" placeholder="년(4자)" required>
+                                <select name="birth" required>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                                <input type="text" id="userBirth" name="userBirth" placeholder="일" required>
+                            </label>
+                        </li>
+                        <li>
+                            <label for="userEmail">
+                                <p>본인확인 이메일</p>
+                                <input type="email" id="userEmail" name="userEmail" required>
+                            </label>
+                        </li>
+                        <li>
+                            <label for="userPhone">
+                                <p>전화번호</p>
+                                <input type="tel" id="userPhone" name="userPhone" placeholder="-없이 숫자만 입력" required>
+                            </label>
+                            <input type="button" value="인증번호 받기">
+                        </li>
+                        <li>
+                            <label for="">
+                                <input type="submit" value="가입하기">
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+            </form>
+    </div>
+    </section>
+    <div class="section-bottom"></div>
+
+    <footer>
+        <div id="footer-service">
+            <h2>HASMARKET<br>SERVICE</h2>
+            <ul>
+                <li><a href="#"><img src="images/등급혜택.png" alt="">등급 혜택</a></li>
+                <li><a href="#"><img src="images/쇼핑몰혜택.png" alt="">쇼핑몰 혜택</a></li>
+                <li><a href="#"><img src="images/매장찾기.png" alt="">매장 찾기</a></li>
+                <li><a href="#"><img src="images/공지사항.png" alt="">공지사항</a></li>
+                <li><a href="#"><img src="images/모바일앱쿠폰.png" alt="">모바일앱 쿠폰</a></li>
+                <li><a href="#"><img src="images/쇼핑몰페이.png" alt="">쇼핑몰 페이</a></li>
+            </ul>
+        </div>
+        <div id="footer-info">
+            <h2>CSCENTER</h2>
+            <p>
+                운영시간 : 10:00 - 17:00 (주말/공휴일 휴무) <br>
+                점심시간 : 11:50 - 13:00 <br>
+                반품주소 : 광주광역시 북구 오치동 934-7 / 도로명: 송월로49번길 43 (우) 61122 <br>
+            </p>
+        </div>
+        <div id="footer-bottom">
+            <h2>SHOPINGMALL</h2>
+            <a href="#">사이트 이용약관</a> |
+            <a href="#">개인정보취급방침</a> |
+            <a href="#">입점/제휴문의</a> |
+            <a href="#">단체구매</a> |
+            <a href="#">사업자정보확인</a> |
+            <a href="#">고객센터</a>
+                    <p>
+                        ㈜에스엠케이티앤아이 (06210) 서울특별시 강남구 언주로 428 10, 11층(모제림) 대표이사:하경준 <br>
+                        사업자등록번호:105-86-14706 통신판매업등록번호:2009-서울강남-00623 고객센터:080-030-2809 FAX:02-711-9042, 02-719-8956
+                    </p>
+            </div>
+        </div>
+        <div class="footer-sns">
+            <h2>SOCIAL</h2>
+            <ul>
+                <li><a href="#"><img src="images/instagram (1).png" alt=""></a></li>
+                <li><a href="#"><img src="images/twitter.png" alt=""></a></li>
+                <li><a href="#"><img src="images/facebook (1).png" alt=""></a></li>
+            </ul>
+        </div>
+    </footer>
+    <div class="section-bottom">11</div>
+    <script src="script/carousel.js"></script>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+</body>
+
+</html>
