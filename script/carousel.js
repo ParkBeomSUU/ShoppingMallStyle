@@ -11,7 +11,7 @@ class Carousel {
   }
 
   // Update css classes for gallery
-  updateGallery() {
+  updateGallery() { //이미지의 순서를 업데이트
     this.carouselArray.forEach(el => {
       el.classList.remove('gallery-item-1');
       el.classList.remove('gallery-item-2');
@@ -26,6 +26,7 @@ class Carousel {
   }
 
   // Update the current order of the carouselArray and gallery
+  // 이전 다음 버튼을 클릭하면 배열의 순서를 업데이트
   setCurrentState(direction) {
 
     if (direction.className == 'gallery-controls-previous') {
@@ -33,7 +34,7 @@ class Carousel {
     } else {
       this.carouselArray.push(this.carouselArray.shift());
     }
-    
+    //업데이트하면 마지막 요소에서 뒤로 빼고 다음버튼 클릭시 맨뒤에꺼 빼서 맨뒤에 추가
     this.updateGallery();
   }
 
@@ -53,7 +54,7 @@ class Carousel {
       galleryControlsContainer.appendChild(document.createElement('button')).className = `gallery-controls-${control}`;
 
       document.querySelector(`.gallery-controls-${control}`).innerText = control;
-    });
+    });// 이너텍스트로 버튼 요소에 텍스트를 추가 
   }
  
   // Add a click event listener to trigger setCurrentState method to rearrange carousel
